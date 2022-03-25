@@ -1,0 +1,2 @@
+-- 35. Query to display Employee Number and Name for all employees who work in a departement with any employee whose name contains a ‘T’. 
+select Eno , ENAME from emp_dept.employee where Dno in (select Dno from emp_dept.employee where ENAME like '%T%')
