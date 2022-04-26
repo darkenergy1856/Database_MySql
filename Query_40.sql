@@ -3,7 +3,7 @@ SELECT y.Dno,
     emp_dept.departement.Dname,
     y.Count
 FROM (
-        SELECT COUNT(DISTINCT (emp_dept.employee.Dno)) 'Count',
+        SELECT COUNT(emp_dept.employee.Dno) 'Count',
             emp_dept.employee.Dno 'Dno'
         FROM emp_dept.employee
         GROUP BY emp_dept.employee.Dno
